@@ -1,5 +1,9 @@
 terraform {
   required_version = "~> 0.13.0"
+  backend "s3" {
+    key    = "state"
+    region = "ap-southeast-1"
+  }
 }
 
 provider "aws" {
