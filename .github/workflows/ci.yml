@@ -24,7 +24,7 @@ jobs:
         run: ./init-remote-state.sh
       - name: Deploy infrastructure
         run: |
-          terraform init infra -backend-config="bucket=${{ env.STATE_BUCKET_NAME }}"
+          terraform init -backend-config="bucket=${{ env.STATE_BUCKET_NAME }}" infra
           terraform apply -auto-approve infra
         env:
           TF_VAR_domain_name: ${{ env.DOMAIN_NAME }}
