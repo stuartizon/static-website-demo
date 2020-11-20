@@ -20,7 +20,9 @@ jobs:
       - name: Build
         run: npm run build
       - name: Deploy infrastructure
-        run: terraform apply -auto-approve infra
+        run: |
+          terraform init infra
+          terraform apply -auto-approve infra
         env:
           TF_VAR_domain_name: $DOMAIN_NAME
       - name: Deploy code
