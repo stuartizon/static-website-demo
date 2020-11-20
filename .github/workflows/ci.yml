@@ -24,6 +24,6 @@ jobs:
           terraform init infra
           terraform apply -auto-approve infra
         env:
-          TF_VAR_domain_name: $DOMAIN_NAME
+          TF_VAR_domain_name: ${{ env.DOMAIN_NAME }}
       - name: Deploy code
         run: npm run deploy
