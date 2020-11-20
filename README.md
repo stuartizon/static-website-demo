@@ -24,6 +24,6 @@ Demo of the approach to host a static website using AWS and Terraform
 
    If this user is not set up with the correct access, then some of the resources will fail to create when running Terraform. Ensure this user has programmatic access. Note the access key ID and secret access key.
 
-5. Fork the repo (or clone it locally, but you will need to run the pipeline steps manually). Modify the domain name in the [CI workflow](.github/workflows/ci.yml).
+5. Fork the repo (or clone it locally, but you will need to run the pipeline steps manually). Modify the domain name, and the state bucket name (which must be unique across S3 globally) in the [CI workflow](.github/workflows/ci.yml). 
 
 6. Set up variables using GitHub secrets for `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`. (Define environment variables in your shell if you are running the pipeline steps locally.)
