@@ -15,6 +15,6 @@ module "website" {
   source      = "stuartizon/static-website/aws"
   version     = "0.1.4"
   domain_name = "www.${var.domain_name}"
-  redirects   = var.domain_name
+  redirects   = [var.domain_name]
   zone_id     = data.aws_route53_zone.root.id
 }
