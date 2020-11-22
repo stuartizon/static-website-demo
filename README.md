@@ -13,7 +13,7 @@ Demo of the approach to host a static website using AWS and Terraform
 
 3. Set up a Route 53 hosted zone for your domain name. (This could also be automated with Terraform config, but I've left it as a manual step for now)
 
-4. Create an IAM user with admin access at the very least to the following policies. ()
+4. Create an IAM user with admin access at the very least to the following policies.
     - AWSLambdaFullAccess
     - IAMFullAccess
     - AmazonS3FullAccess
