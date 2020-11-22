@@ -12,7 +12,7 @@ jobs:
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       DOMAIN_NAME: stuartizon.com
-      STATE_BUCKET_NAME: stuartizon-terraform-state
+      STATE_BUCKET_NAME: stuartizon-tfstate
     steps:
       - name: Checkout
         uses: actions/checkout@v2

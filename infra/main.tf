@@ -2,13 +2,13 @@ terraform {
   required_version = "~> 0.13.0"
   backend "s3" {
     key    = "state"
-    region = "ap-southeast-1"
+    region = "ap-southeast-2"
   }
 }
 
 provider "aws" {
   version = "~> 2.0"
-  region  = "ap-southeast-1"
+  region  = "ap-southeast-2"
 }
 
 data "aws_route53_zone" "root" {
